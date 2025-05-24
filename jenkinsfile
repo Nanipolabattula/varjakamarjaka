@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo '✅ Step: Installing dependencies...'
+                sh 'echo Simulating build step (e.g., pip install -r requirements.txt)'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo '✅ Step: Running tests...'
+                sh 'echo Simulating test step (e.g., pytest tests/)'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo '✅ Step: Deploying application...'
+                sh 'echo Simulating deployment (e.g., bash deploy.sh)'
+            }
+        }
+    }
+}
+
